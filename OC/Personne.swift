@@ -2,11 +2,19 @@ import Foundation
 
 class Personne {
 
-    var nom: String = "Durand"
-    var prenom: String = "Jeanne"
-    var sexe: String = "f"
-    var age: Int = 24
-    var adresse: String = "22 rue machin"
+    var nom: String
+    var prenom: String
+    var sexe: String
+    var age: Int
+    var adresse: String
+
+    init(nom: String, prenom: String, sexe: String, age: Int, adresse: String) {
+        self.nom = nom
+        self.prenom = prenom
+        self.sexe = sexe
+        self.age = age
+        self.adresse = adresse
+    }
 
     func seMarier(nouveauNom: String) {
         if personneEstDeSexeFeminin() {
