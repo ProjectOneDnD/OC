@@ -9,15 +9,19 @@ class Personne {
     var adresse: String = "22 rue machin"
 
     func seMarier(nouveauNom: String) {
-        if self.sexe == "f" {
+        if personneEstDeSexeFeminin() {
             self.nom = nouveauNom
         } else {
             print("Une garçon ne peut pas changer de nom de famille")
         }
     }
 
+    func personneEstDeSexeFeminin() -> Bool {
+        return sexe == "f"
+    }
+
     func feterSonAnniversaire() {
-        self.age++
+        self.age += 1
     }
 
     func demenager(nouvelleAdresse: String) {
